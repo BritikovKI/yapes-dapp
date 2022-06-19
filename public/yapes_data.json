@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "tier": 1,
+    "tax": 23,
+    "rewards": 5,
+    "image": "ape_01.png"
+  },
+  {
+    "id": 1002,
+    "tier": 2,
+    "tax": 34,
+    "rewards": 3,
+    "image": "ape_02.png"
+  },
+  {
+    "id": 1003,
+    "tier": 3,
+    "tax": 34,
+    "rewards": 4,
+    "image": "ape_03.png"
+  }
+]

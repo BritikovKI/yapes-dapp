@@ -1,0 +1,146 @@
+.header {
+  width: 100%;
+  background-color: var(--clr-dark);
+  display: flex;
+  align-items: center;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  max-width: 1440px;
+  min-height: 5.875rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.nav__logo {
+  flex-grow: 1;
+}
+
+.nav__menu-toggler {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  line-height: 1;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 3rem;
+  color: var(--clr-accent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+.close-menu-icon {
+  opacity: 0;
+}
+
+.open-menu-icon {
+  transition-delay: 0.3s;
+}
+
+.show-menu .close-menu-icon {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.show-menu .open-menu-icon {
+  opacity: 0;
+  transition-delay: none;
+}
+
+.nav__menu-block,
+.nav__button-block {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.nav__menu-block-open,
+.nav__button-block-open {
+  padding: 2rem 0;
+  max-height: auto;
+  /* overflow: visible; */
+  transition-delay: none;
+}
+
+.nav__menu-block li a {
+  color: var(--clr-accent);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-shadow: none;
+  transition: var(--transition);
+}
+
+.nav__menu-block li a:hover {
+  text-shadow: 1px 1px 5px var(--clr-accent);
+}
+
+.nav__menu-block .active {
+  font-weight: bold;
+}
+
+.nav__button-info {
+  color: var(--clr-accent);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.nav__button {
+  padding: 0.625rem 1rem;
+  background-color: transparent;
+  color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  border-radius: var(--basic-radius);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav__button:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-black);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    flex-grow: 0;
+  }
+
+  .nav__menu-block,
+  .nav__button-block {
+    width: auto;
+    text-align: center;
+    max-height: auto;
+    overflow: visible;
+  }
+
+  .nav__menu-toggler {
+    display: none;
+  }
+}

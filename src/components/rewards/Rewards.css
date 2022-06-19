@@ -1,0 +1,110 @@
+.rewards {
+  max-width: 1220px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.rewards p {
+  font-size: 1.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.rewards hr {
+  border: none;
+  background-color: var(--clr-black);
+  height: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.rewards__info {
+  min-height: 18rem;
+  padding: 2rem;
+  background-color: var(--clr-accent);
+  border-radius: var(--basic-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rewards__claim {
+  min-height: 18rem;
+  padding: 2rem;
+  background-color: var(--clr-black);
+  border-radius: var(--basic-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rewards__claim p {
+  text-align: center;
+}
+
+.rewards__claim .rewards__claim-title {
+  font-size: 2rem;
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+.rewards__claim .rewards__claim-total {
+  padding: 0.25rem 0;
+  font-size: 1.75rem;
+  color: var(--clr-black);
+  font-weight: 600;
+  background-color: var(--clr-white);
+  border-radius: var(--basic-radius);
+}
+
+.rewards__claim .rewards__claim-button {
+  padding: 0.25rem 0;
+  font-size: 1.75rem;
+  color: var(--clr-black);
+  font-weight: 600;
+  background-color: var(--clr-accent);
+  border-radius: var(--basic-radius);
+}
+
+.rewards__claim-button {
+  cursor: pointer;
+  border: 1px solid var(--clr-black);
+  transition: var(--transition);
+}
+
+.rewards__claim-button:hover {
+  color: var(--clr-accent-light);
+  background-color: var(--clr-black);
+  border: 1px solid var(--clr-accent-light);
+}
+
+.note {
+  max-width: 1220px;
+  margin-top: 2rem;
+}
+
+.note__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--clr-white);
+}
+
+.note__text {
+  font-size: 1.5rem;
+  color: var(--clr-white);
+  white-space: pre-line;
+}
+
+@media (min-width: 900px) {
+  .rewards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .rewards__info,
+  .rewards__claim {
+    width: 50%;
+  }
+}

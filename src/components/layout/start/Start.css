@@ -1,0 +1,28 @@
+.start__image-container {
+  margin: 0 auto;
+  width: min(28rem, 80%);
+  border: 1rem solid #ffcf1f;
+  border-radius: 50%;
+}
+
+.start__image-container-inner {
+  padding-top: 100%;
+  /* background-image: url("../img/ape_01.png"); */
+  background-color: #3d3d3b;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.start__text-container {
+  width: min(48rem, 88%);
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.start__text {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--clr-accent);
+}

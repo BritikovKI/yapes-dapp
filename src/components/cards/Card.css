@@ -1,0 +1,141 @@
+.altcard {
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--basic-radius);
+  overflow: hidden;
+}
+
+.altcard__picture {
+  width: 100%;
+  height: 400px;
+  background-color: #3d3d3b;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.altcard__info-block {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.altcard__info {
+  width: 100%;
+  height: 300px;
+  background-color: var(--clr-white);
+  padding: 2rem 1rem 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.altcard__info-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.altcard__info-tier {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.altcard__info-tier span {
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-accent);
+  border-radius: 0.375rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+}
+
+.altcard__button {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--clr-white);
+  text-align: center;
+}
+
+.altcard__info-button {
+  display: inline-block;
+  padding: 0.75rem 3rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 0.375rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.altcard__info-button:hover {
+  background-color: var(--clr-accent);
+}
+
+.altcard__info p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.altcard__info .card__info-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .altcard {
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .altcard__picture {
+    width: 50%;
+    height: 400px;
+  }
+
+  .altcard__info-block {
+    height: 400px;
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .altcard__info {
+    height: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .altcard {
+    max-width: 100%;
+  }
+
+  .altcard__info-block {
+    flex-direction: row;
+    width: 74%;
+    height: 272px;
+  }
+
+  .altcard__info {
+    width: 60%;
+  }
+
+  .altcard__button {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .altcard__picture {
+    width: 26%;
+    min-width: 272px;
+    height: 272px;
+  }
+}
