@@ -13,6 +13,7 @@ const Header = () => {
           method: "eth_requestAccounts",
         });
         setWalAddress(accounts[0]);
+        console.log(accounts[0]);
       } catch {
         console.log("Connection error...");
       }

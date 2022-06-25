@@ -6,7 +6,7 @@ import Start from "../layout/start/Start";
 import Loader from "../layout/loader/Loader";
 
 const Home = () => {
-  const rewUrl = "rewards_data.json";
+  const rewUrl = "http://127.0.0.1:8000/balance/?address=0x643e1fd8672D37135c169206F03f31571d3b69bb";
   const yapUrl = "yapes_data.json";
 
   const { isConnected, yapes, setYapes, rewards, setRewards } =

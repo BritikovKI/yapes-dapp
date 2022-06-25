@@ -1,8 +1,15 @@
 import "./Rewards.css";
+import {useContext} from "@types/react";
+import {ConnectionContext} from "../layout/Layout";
 
 const Rewards = ({ rewards }) => {
+  const {
+    walAddress,
+  } = useContext(ConnectionContext);
   const handleClaimClick = () => {
-    alert("Hey, do something with this shit!");
+    fetch('http://127.0.0.1:8000/withdraw/?address='+walAddress)
+        .then(response => response.json())
+        .then(data => this.setState({ totalReactPackages: data.total }));
   };
 
   return (
