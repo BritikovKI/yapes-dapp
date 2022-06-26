@@ -14,6 +14,8 @@ const Header = () => {
     setIsConnected,
     walAddress,
     setWalAddress,
+    setSigner,
+    setProvider,
     walBalance,
     setWalBalance,
     yapBalance,
@@ -46,6 +48,8 @@ const Header = () => {
         setYapBalance(formatedDAIBalance);
 
         setWalAddress(walletAddress);
+        setSigner(signer);
+        setProvider(provider);
         setWalBalance(formatedBalance);
         setIsConnected(true);
       } catch (error) {
@@ -104,7 +108,7 @@ const Header = () => {
         >
           <div className="nav__button-info">
             <nobr>
-              {isConnected ? `${yapBalance} yapes | ${walBalance} eth` : ""}
+              {isConnected ? `${Number(yapBalance).toFixed(2)} yapes | ${Number(walBalance).toFixed(2)} eth` : ""}
               {/* {!yapBalance ? " --- " : `${yapBalance} yapes`} |{" "}
               {!walBalance ? " --- " : `${walBalance} eth`} */}
             </nobr>

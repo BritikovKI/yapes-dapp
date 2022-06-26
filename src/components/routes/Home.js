@@ -6,22 +6,30 @@ import Start from "../layout/start/Start";
 import Loader from "../layout/loader/Loader";
 
 const Home = () => {
-  const rewUrl = "http://127.0.0.1:8000/balance/?address=0x643e1fd8672D37135c169206F03f31571d3b69bb";
-  const yapUrl = "yapes_data.json";
+  const { isConnected, yapes, setYapes, walAddress, rewards, setRewards } =
+      useContext(ConnectionContext);
 
-  const { isConnected, yapes, setYapes, rewards, setRewards } =
-    useContext(ConnectionContext);
+  const rewUrl = "http://127.0.0.1:8000/balance/?address="+walAddress;
+  const yapUrl = "http://127.0.0.1:8000/nfts/?address="+walAddress;
+
   const [isLoading, setIsLoading] = useState(false);
 
   const getData = useCallback(
     async (dataType, url) => {
       try {
-        let response = await fetch(url);
-        let data = await response.json();
+        let response = {};
+        let data = {};
+        if(walAddress === "Connect"){
+          console.log(walAddress)
+          response = await fetch(url);
+          data = await response.json();
+        }
         if (dataType === "rew") {
+          console.log(data);
           setRewards(data);
         }
         if (dataType === "yap") {
+          console.log(data);
           setYapes(data);
         }
         // console.log(data);

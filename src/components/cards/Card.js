@@ -1,7 +1,8 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ id, tier, tax, rewards, image }) => {
+const Card = ({ id, tier, taxRate, rewards, imgLink }) => {
+  console.log(id, tier, taxRate, rewards, imgLink)
   const handleClaimClick = () => {
     alert("Hey, do something with this shit!");
   };
@@ -11,7 +12,7 @@ const Card = ({ id, tier, tax, rewards, image }) => {
       <div
         className="altcard__picture"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/img/${image})`,
+          backgroundImage: `url(${imgLink})`,
         }}
       ></div>
       <div className="altcard__info-block">
@@ -20,7 +21,7 @@ const Card = ({ id, tier, tax, rewards, image }) => {
             <span>Tier {tier}</span>
           </div>
           <p className="altcard__info-title">Yung Ape #{id}</p>
-          <p>Applicable Tax Rate: {tax}%</p>
+          <p>Applicable Tax Rate: {taxRate}%</p>
           <p>Rewards: {rewards} $YAPES</p>
         </div>
         <div className="altcard__button">

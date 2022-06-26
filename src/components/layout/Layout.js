@@ -6,6 +6,8 @@ export const ConnectionContext = createContext();
 const Layout = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false);
   const [walAddress, setWalAddress] = useState("Connect");
+  const [signer, setSigner] = useState("Connect");
+  const [provider, setProvider] = useState("Connect");
   const [walBalance, setWalBalance] = useState("");
   const [yapBalance, setYapBalance] = useState("");
   const [yapes, setYapes] = useState(null);
@@ -19,6 +21,10 @@ const Layout = ({ children }) => {
           setIsConnected,
           walAddress,
           setWalAddress,
+          signer,
+          setSigner,
+          provider,
+          setProvider,
           walBalance,
           setWalBalance,
           yapBalance,

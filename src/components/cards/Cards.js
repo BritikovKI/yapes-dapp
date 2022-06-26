@@ -5,9 +5,9 @@ const Cards = ({ yapes = [] }) => {
   return (
     <div className="wrapper">
       <h1 className="section__title">Young Apes</h1>
-      {yapes.map((yape) => (
+      {yapes ? yapes['nfts'].map((yape) => (
         <Card key={yape.id} {...yape} />
-      ))}
+      )) : null}
     </div>
   );
 };
